@@ -41,10 +41,10 @@ function verficaResposta() {
   if(resposta.toLowerCase() == "discos"){
     document.getElementById("feedback").innerHTML = "Acertou mizeravi! Aguarde até o próximo presente...quer dizer, desafio! <3";
     document.getElementById("feedback").removeAttribute("hidden");
-    document.getElementById("divfeedback").setAttribute("hidden");
+    document.getElementById("divfeedback").setAttribute("hidden","hidden");
   }
   else {
-    document.getElementById("feedback").setAttribute("hidden");
+    document.getElementById("feedback").setAttribute("hidden","hidden");
     document.getElementById("divfeedback").removeAttribute("hidden");
   }
   
