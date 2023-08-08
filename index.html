@@ -15,14 +15,15 @@
       <script type="text/javascript" src="https://files.fm/embed/player?hash=phxf6sfrf&w=100%&h=auto" id="filesfm_embed_js__phxf6sfrf"></script>
     </div>
     <div>
-      <p>A irmã pós moderna, a energia do presente:</p>
-      <input id="resposta" type="text" maxlength="4">
+      <p>Vende na feira, é uma delícia e tem pra todos os gostos:</p>
+      <input id="resposta" type="text" maxlength="6">
       <button onclick="verficaResposta()">Responder</button>
       <p id="feedback" hidden></p>
+     <div id="divfeedback" hidden>
+       <a href="https://files.fm/u/suuv6nqwk#/view/perdeuTudoOficial.png"><img src="https://files.fm/thumb_show.php?i=zq38x8emw"></a>
+     </div>
     </div>
-    <div>
-      <a href="https://files.fm/u/suuv6nqwk#/view/perdeuTudoOficial.png"><img src="https://files.fm/thumb_show.php?i=zq38x8emw"></a>
-    </div>
+  
 <p id="demo"></p>
 
 <script>
@@ -37,13 +38,14 @@ function calculaData(){
 
 function verficaResposta() {
   var resposta = document.getElementById("resposta").value;
-  if(resposta == "mana"){
+  if(resposta.toLowerCase() == "discos"){
     document.getElementById("feedback").innerHTML = "Acertou mizeravi! Aguarde até o próximo presente...quer dizer, desafio! <3";
     document.getElementById("feedback").removeAttribute("hidden");
+    document.getElementById("divfeedback").setAttribute("hidden");
   }
   else {
-    document.getElementById("feedback").innerHTML = "Humm...acho que não ein..."
-    document.getElementById("feedback").removeAttribute("hidden");
+    document.getElementById("feedback").setAttribute("hidden");
+    document.getElementById("divfeedback").removeAttribute("hidden");
   }
   
 }
